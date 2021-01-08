@@ -11,9 +11,6 @@ be thought of as reviews but are more free form --general opinions etc).
 * jQuery
 * Bootstrap
 * AJAX
-* Mongoose/MongoDB
-* Passport
-* bcrypt
 
 ### API Documentation
 add later
@@ -37,7 +34,7 @@ add later
 ### Wireframes #
 Went digital with this Wireframe, my physical ones didn't turn out that well so
 
-![Wireframe](https://www.figma.com/file/99rWfoiYwpKR1IDSxdJbPn/Front-end-website-design?node-id=0%3A1)
+![Wireframe](https://media.git.generalassemb.ly/user/32482/files/f11e6f80-500e-11eb-9f69-2991fa217087)
 
 
 ### Future Plans, Problems to solve #
