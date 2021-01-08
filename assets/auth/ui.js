@@ -1,5 +1,5 @@
 'use strict'
-const store = require('./../store')
+const store = require('../scripts/store')
 
 const msgClearer = function (field) {
   const statusmsgclear = () => $(field).text('')
