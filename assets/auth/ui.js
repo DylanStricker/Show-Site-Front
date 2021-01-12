@@ -5,7 +5,10 @@ const msgClearer = function (field) {
   const statusmsgclear = () => $(field).text('')
   setTimeout(statusmsgclear, 20000)
 }
-
+const onError = function (error) {
+  $('#current-status').text('error: ' + error.responseJSON.message)
+  msgClearer('#current-status')
+}
 const onSignInSuccess = function (responseData) {
   // console.log('user data', responseData)
   // console.log('success!')
@@ -49,5 +52,6 @@ module.exports = {
   onPChangeSuccess,
   onSignInSuccess,
   onSignOutSuccess,
-  onSignUpSuccess
+  onSignUpSuccess,
+  onError
 }

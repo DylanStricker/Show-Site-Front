@@ -1,6 +1,8 @@
 const getFormFields = require('../../lib/get-form-fields')
 const api = require('./api')
+const sapi = require('../show/api')
 const ui = require('./ui')
+const sui = require('../show/ui')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -19,10 +21,15 @@ const onSignIn = function (event) {
 
   const form = event.target
   const data = getFormFields(form)
-
-  api.signIn(data)
-    .then(ui.onSignInSuccess)
-    .catch(ui.onError)
+  const getshows = async () => {
+    await api.signIn(data)
+      .then(ui.onSignInSuccess)
+      .catch(ui.onError)
+    await sapi.indexUserShows()
+      .then(sui.onIUSSuccess) // Index User Shows Success
+      .catch(ui.onError)
+  }
+  getshows()
 }
 const onPChange = function (event) {
   event.preventDefault()
