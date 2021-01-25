@@ -13,10 +13,16 @@ be thought of as reviews but are more free form --general opinions etc).
 * AJAX
 
 ### API Documentation
-add later
+[Back-End-Link]https://github.com/DylanStricker/back-end-show-site
 
 ### Planning and Organization #
-1. Created wireframe and user stories.
+0. Back end design
+1. Created wireframe and user stories
+2. Create HTML
+3. Create jquery response for events
+4. Create UI response
+5. Add error handlers
+
 
 ### User Stories #
 
@@ -39,4 +45,8 @@ Went digital with this Wireframe, my physical ones didn't turn out that well so
 
 ### Future Plans, Problems to solve #
 
-Add everything lol
+* Add personal user show list
+* Add features to allow for dynamic show adding to that list
+* Add features to allow for dynamic show removal from that list
+* Stylize the Site
+* add user reviews

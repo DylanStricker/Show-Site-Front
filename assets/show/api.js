@@ -21,6 +21,7 @@ const showAdd = function (data) {
 }
 
 const showCreate = function (data) {
+  // console.log(data)
   return $.ajax({
     url: config.apiUrl + '/shows',
     method: 'POST',
@@ -50,9 +51,19 @@ const showsGet = function (data) {
   })
 }
 
+// const showGet = function (data) {
+//   return $.ajax({
+//     url: config.apiUrl + '/shows/' + data.show._id,
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Bearer ' + store.user.token
+//     }
+//   })
+// }
+
 const showRemove = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/users/' + store.user._id + '/shows',
+    url: config.apiUrl + '/users/:id/shows',
     method: 'DELETE',
     data,
     headers: {
@@ -63,7 +74,7 @@ const showRemove = function (data) {
 
 const showUpdate = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/users/' + store.user._id + '/shows',
+    url: config.apiUrl + '/shows/:id',
     method: 'PATCH',
     data,
     headers: {
@@ -77,6 +88,7 @@ module.exports = {
   showAdd,
   showCreate,
   showDestroy,
+  // showGet,
   showsGet,
   showRemove,
   showUpdate

@@ -6,7 +6,8 @@ const msgClearer = function (field) {
   setTimeout(statusmsgclear, 20000)
 }
 const onError = function (error) {
-  $('#current-status').text('error: ' + error.responseJSON.message)
+  // console.log(error)
+  $('#current-status').html(`<p>${error.responseJSON.message}</p>`)
   msgClearer('#current-status')
 }
 const onSignInSuccess = function (responseData) {
