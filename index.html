@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Web Logger</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body>
+      <h1>Log-Site</h1>
+      <p id="current-status"></p>
+      <div class="unauthenticated">
+        <h2>Sign Up!</h2>
+        <form id="sign-up">
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <button type="submit">Sign Up</button>
+        </form>
+        <h2>Sign in!</h2>
+        <form id="sign-in">
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+      <div class="authenticated nav">
+        <h2>Need to change your password?</h2>
+        <form id="pass-change">
+          <input type="password" name="passwords[old]" placeholder="Old Password">
+          <input type="password" name="passwords[new]" placeholder="New Password">
+          <button type="submit">Change</button>
+        </form>
+        <h2>Sign Out</h2>
+        <form id="sign-out">
+        <button type="submit">Sign Out</button>
+        </form>
+      </div>
+      <div class="authenticated right">
+        <!-- <h3>Add show to your list</h3>
+        <form id="show-add">
+          <input type="text" name="_id" placeholder="Show ID">
+          <button type="submit">Add</button>
+        </form>
+        <h3>Remove show from your list</h3>
+        <form id="show-remove">
+          <input type="text" name="_id" placeholder="Show ID">
+          <button type="submit">Remove</button>
+        </form> -->
+        <h3>Create a show</h3>
+        <form id="show-create">
+          <input type="text" name="show[title]" placeholder="Title">
+          <input type="text" name="show[director]" placeholder="Director">
+          <input type="number" min="0" max="10" name="show[rating]" placeholder="/10">
+          <input type="text" name="show[desc]" placeholder="Description">
+          <input type="date" name="show[releaseDate]" placeholder="Release Date">
+          <button type="submit">Create</button>
+        </form>
+        <h3>Update a show</h3>
+        <form id="show-update">
+          <input type="text" name="show[_id]" placeholder="Show ID">
+          <input type="text" name="show[title]" placeholder="Title">
+          <input type="text" name="show[director]" placeholder="Director">
+          <input type="number" min="0" max="10" name="show[rating]" placeholder="/10">
+          <input type="text" name="show[desc]" placeholder="Description">
+          <input type="date" name="show[releaseDate]" placeholder="Release Date">
+          <button type="submit">Update</button>
+        </form>
+        <h3>Delete a show</h3>
+        <form id="show-destroy">
+          <input type="text" name="show[_id]" placeholder="Show ID">
+          <button type="submit">Delete</button>
+        </form>
+        <!-- <h3>Get one show</h3>
+        <form id="show-get">
+          <input type="text" name="show[_id]" placeholder="Show ID">
+          <button type="submit">Get</button>
+        </form> -->
+      </div>
+      <div class="authenticated left">
+        <button type="button" name="IndexShows" id="index-req">Show all shows</button>
+        <ol id="all-shows"></ol>
+        <h5 id="show-request"></h5>
+      </div>
+    </body>
